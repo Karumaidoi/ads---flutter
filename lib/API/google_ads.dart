@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class GoogleAds {
   BannerAd? myBannerAd;
 
-  setBanner() {
+  loadBanner() {
     myBannerAd = myBannerAd = BannerAd(
         size: AdSize.banner,
         adUnitId: 'ca-app-pub-3940256099942544/6300978111',

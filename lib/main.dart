@@ -37,7 +37,7 @@ class _AdPageState extends State<AdPage> {
 
   @override
   void initState() {
-    myBannerAd = GoogleAds().setBanner();
+    myBannerAd = GoogleAds().loadBanner();
     super.initState();
   }
 
