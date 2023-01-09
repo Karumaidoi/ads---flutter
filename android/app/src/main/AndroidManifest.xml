@@ -20,9 +20,7 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
-            <meta-data
-                android:name="com.google.android.gms.ads.ca-app-pub-8889406004412478~8494746735"
-                android:value="ca-app-pub-8889406004412478/9566169723"/>
+            
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,6 +29,9 @@
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="ca-app-pub-3940256099942544~3347511713"/>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />

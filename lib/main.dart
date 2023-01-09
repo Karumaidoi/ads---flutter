@@ -30,14 +30,14 @@ class AdPage extends StatefulWidget {
   State<AdPage> createState() => _AdPageState();
 }
 
-BannerAd? myBannerAd;
-
 class _AdPageState extends State<AdPage> {
+  BannerAd? myBannerAd;
+
   @override
   void initState() {
     myBannerAd = BannerAd(
         size: AdSize.banner,
-        adUnitId: 'ca-app-pub-8889406004412478/9566169723',
+        adUnitId: 'ca-app-pub-3940256099942544/6300978111',
         listener: BannerAdListener(),
         request: AdRequest());
 
@@ -56,10 +56,15 @@ class _AdPageState extends State<AdPage> {
     );
     return Scaffold(
       appBar: AppBar(),
-      body: SizedBox(
-        height: 50,
-        width: 200,
-        child: adContainer,
+      body: Column(
+        children: [
+          const Spacer(),
+          SizedBox(
+            height: 100,
+            width: double.infinity,
+            child: adContainer,
+          )
+        ],
       ),
     );
   }
