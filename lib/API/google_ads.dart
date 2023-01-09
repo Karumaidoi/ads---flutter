@@ -6,7 +6,7 @@ class GoogleAds {
   loadBanner() {
     myBannerAd = myBannerAd = BannerAd(
         size: AdSize.banner,
-        adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+        adUnitId: 'ca-app-pub-3940256099942544/6300978111', //Test AdUnit
         listener: const BannerAdListener(),
         request: const AdRequest());
 
