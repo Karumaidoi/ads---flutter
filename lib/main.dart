@@ -14,9 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: const AdPage(),
     );
@@ -38,8 +39,8 @@ class _AdPageState extends State<AdPage> {
     myBannerAd = BannerAd(
         size: AdSize.banner,
         adUnitId: 'ca-app-pub-3940256099942544/6300978111',
-        listener: BannerAdListener(),
-        request: AdRequest());
+        listener: const BannerAdListener(),
+        request: const AdRequest());
 
     myBannerAd!.load();
     super.initState();
@@ -55,7 +56,14 @@ class _AdPageState extends State<AdPage> {
       child: adWidget,
     );
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text(
+          'Test AdUnit',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
       body: Column(
         children: [
           const Spacer(),
