@@ -1,3 +1,4 @@
+import 'package:firebaseauth/API/google_ads.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -36,13 +37,7 @@ class _AdPageState extends State<AdPage> {
 
   @override
   void initState() {
-    myBannerAd = BannerAd(
-        size: AdSize.banner,
-        adUnitId: 'ca-app-pub-3940256099942544/6300978111',
-        listener: const BannerAdListener(),
-        request: const AdRequest());
-
-    myBannerAd!.load();
+    myBannerAd = GoogleAds().setBanner();
     super.initState();
   }
 
